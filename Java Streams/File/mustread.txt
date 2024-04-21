@@ -1,0 +1,14 @@
+## Stream Type           ## Purpose                                                                   ## Example Use Cases                                                   ##
+|-----------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------|
+| FileInputStream       | Reads raw bytes from a file                                                | Reading binary files, reading images, audio files                   |
+| FileOutputStream      | Writes raw bytes to a file                                                  | Writing binary files, saving images, saving audio data              |
+| DataInputStream       | Reads primitive data types (int, float, etc.) from an input stream          | Reading/writing data to/from files in a structured manner           |
+| DataOutputStream      | Writes primitive data types (int, float, etc.) to an output stream          | Writing data to files in a structured manner                        |
+| BufferedInputStream   | Buffers input from an underlying input stream for improved performance     | Reading large files efficiently, network communication              |
+| BufferedOutputStream  | Buffers output to an underlying output stream for improved performance    | Writing large files efficiently, network communication             |
+| BufferedReader        | Reads text from a character-input stream, buffering characters for efficiency | Reading text files line by line, reading from network              |
+| BufferedWriter        | Writes text to a character-output stream, buffering characters for efficiency | Writing text files line by line, writing to network               |
+| InputStreamReader    | Converts bytes from an input stream into characters                        | Reading text from files, network sockets, or other byte streams   |
+| OutputStreamWriter   | Converts characters into bytes for an output stream                         | Writing text to files, network sockets, or other byte streams     |
+| ObjectInputStream     | Reads objects from an input stream                                          | Reading serialized objects from files or network                   |
+| ObjectOutputStream    | Writes objects to an output stream                                          | Writing serialized objects to files or network                      |

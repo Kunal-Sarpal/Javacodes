@@ -1,0 +1,10 @@
+Static keywords are used to represent the meta data used to represent information related to class
+
+
+(any object change value of static property then same value available for object)(all the object can use as a shared data)
+
+
+
+if data need some modificaiton (method)
+
+lots of methods (static class)

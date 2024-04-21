@@ -1,0 +1,44 @@
+Resources 
+Buffer -> it is temporary memory object
+Streams - > Flow of data
+BYTE_STREAM Classes - 1 byte stream
+CHRACTER STREAM classes char - 2byte
+
+input STREAM; -> coming in  java program  
+output STREAM; - >going out from java program
+
+
+#InputSTream/OutputStream
+
+Methods
+int read(); read only one byte data (a,b,c,d,e) read for 5 times -> return -1 if nothing to read;
+
+int read(byte[] data); read collection of bytes array ikatha ;
+int read(byte[] data, int offset,int len) From where to howmany;
+
+int available() tell you how many bytes are available;
+
+int skip()
+
+void mark(int limit);
+
+void close() // after finishing 
+
+//Output stream
+
+void write(int b);
+void write(byte[] arr);
+void write(byte[] arr, int offset, int len);
+ void  flush(); if data is int buffer if we use flush then data will go nback from buuffer to resource
+ void close();
+
+
+ /////~~~ Reader and writer class is fro CHRACTER type data 
+ /////~~~ inputStream and OutputStream for byte type dataa
+
+
+ 65 - 90  (Ascci code capital letters)
+ 97 - 122  (Ascci code lower letters)
+
+ Byte array input stream (array of bytes read);
+ Byte array output stream (array of write read);

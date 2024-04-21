@@ -1,0 +1,207 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 		int a = 9;
+// 		int b = 459;
+// 		 System.out.println("Before Swaping: "+ a + " " + b );
+// 		a = a + b;
+	   
+// 		b = a - b;
+// 		a = a - b;
+// 		System.out.println("After Swaping: "+ a + " " + b );
+// 	}
+// }
+
+// Swpaing using Xor operator;
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 		int a = 9;
+// 		int b = 459;
+// 		 System.out.println("Before Swaping: "+ a + " " + b );
+// 		a = a ^ b;
+	   
+// 		b = a ^ b;
+// 		a = a ^ b;
+// 		System.out.println("After Swaping: "+ a + " " + b );
+// 	}
+// }
+
+// Hamming weight;
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 	   int num = 450;
+	   
+// 	   int count = 0;
+// 	   int c_z = 0;
+// 	   while(num != 0){
+// 	       count+=num&1;
+// 	       c_z++;
+// 	       num = num >>> 1;
+// 	   }
+// 	   System.out.println("No. of 1's : "+count+" No. of 0's: "+ (c_z - count));
+// 	}
+// }
+
+// // "Fall through" in the context of a switch statement refers to the flow of control continuing from one case to the next without breaking out of the switch statement. This behavior can be used intentionally to handle multiple cases in a similar way.
+import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter a character: ");
+//         String input = sc.next();
+
+//         // Check if the input is a single character
+//         if (input.length() == 1) {
+//             char a = input.charAt(0);
+
+//             switch (a) {
+//                 case 'a':
+//                 case 'e':
+//                 case 'i':
+//                 case 'o':
+//                 case 'u':
+//                     System.out.println(a + " is Vowel");
+//                     break;
+//                 default:
+//                     System.out.println(a + " is Consonant");
+//             }
+//         } else {
+//             System.out.println("Please enter a single character.");
+//         }
+
+//         // Close the Scanner to avoid resource leak
+//         sc.close();
+//     }
+// }
+
+// Revrese of Number
+// public class Main {
+//     public static void reverse(int num){
+//         if(num == 0){
+//             return;
+//         }
+//         int rem = num%10;
+//         int quot = num/10;
+        
+//         System.out.print(rem);
+//         reverse(quot);
+//     }
+//     public static void main(String[] args){
+        
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+        
+//         reverse(n);
+//     }
+// }
+
+// Pascal triangle
+
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter the number of rows for Pascal's Triangle: ");
+//         int numRows = sc.nextInt();
+
+//         for (int i = 0; i < numRows; i++) {
+//             // int number = 1;
+
+//             for (int j = 0; j < numRows - 1 ; j++) {
+//                 System.out.print(" * ");
+//             }
+
+//             for (int j = 0; j <= i; j++) {
+//                 System.out.print(number);
+//                 number = number * (i - j) / (j + 1);
+//             }
+
+//             System.out.println();
+//         }
+
+//         // Close the Scanner to avoid resource leak
+//         sc.close();
+//     }
+// }
+
+// Pascal’s triangle is a pattern of the triangle which is based on nCr.below is the pictorial representation of Pascal’s triangle.
+// import java.util.Scanner;
+
+
+// public class Main {
+//     public static int fact(int num){
+//         if(num == 0 || num == 1){
+//             return 1;
+//         }
+//         return num * fact(num-1);
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter the number of rows for Pascal's Triangle: ");
+//         int n = sc.nextInt();
+
+        
+//          for(int i = 1; i <= n;i++)
+//          {
+//              for(int j = n; j >= i;j--){
+//                  System.out.print("  ");
+//              }
+//              for(int fcol = 1; fcol <= i; fcol++){
+//                     int ans = (fact(i))/(fact(i - fcol))*(fact(fcol) );
+//                      System.out.print(ans);
+//              }
+//               System.out.println("");
+//          }
+//         // Close the Scanner to avoid resource leak
+//         // sc.close();
+//     }
+// }
+
+import java.util.Scanner;
+
+public class Main {
+    // Recursive factorial calculation
+    public static int fact(int num) {
+        if (num == 0 || num == 1) {
+            return 1;
+        }
+        return num * fact(num - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows for Pascal's Triangle: ");
+        int n = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = n; j > i; j--) {
+                System.out.print("  ");
+            }
+            for (int fcol = 0; fcol <= i; fcol++) {
+                // Calculate binomial coefficient using factorials
+                int coef = fact(i) / (fact(i - fcol) * fact(fcol));
+                System.out.printf("%4d", coef);
+            }
+            System.out.println();
+        }
+
+        // Close the Scanner to avoid resource leak
+        sc.close();
+    }
+}

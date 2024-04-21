@@ -1,0 +1,173 @@
+$  git config --global user.name Kunal
+$ git config --global user.email sarpalkunal7@gmail.com
+
+$ git config --global user.name
+$ git config --global user.email
+
+
+It is compulsory to fill the feedback on Pathway for Feedback :
+LPU Touch - Dashboard - Skill Development Feedback - (Select Course Code) and fill in feedback.
+
+9PV03PESV21
+
+
+17feb CA1 unit-1 and unit-2
+
+
+
+
+// // Define an enum named "Day"
+// enum Day {
+//     SUNDAY,
+//     MONDAY,
+//     TUESDAY,
+//     WEDNESDAY,
+//     THURSDAY,
+//     FRIDAY,
+//     SATURDAY;
+// }
+
+// // Main class
+// public class Main {
+  
+//     // Instance variable to store the day
+//     Day day;
+
+//     // Constructor that takes a Day parameter
+//     Main(Day day) {
+//         this.day = day;
+//     }
+
+//     // Method to print information about the day
+//     public void dayIsLike() {
+//         switch (day) {
+//             case MONDAY:
+//                 System.out.println("Start of the week");
+//                 break;
+//             case FRIDAY:
+//                 System.out.println("Better");
+//                 break;
+//             case SATURDAY:
+//             case SUNDAY:
+//                 System.out.println("Weekend");
+//                 break;
+//             default:
+//                 System.out.println("Weekdays");
+//                 break;
+//         }
+//     }
+
+//     // Main method
+//     public static void main(String[] args) {
+//         // Create an instance of Main with the Day "MONDAY"
+//         String str = "MONDAY";
+//         Main t1 = new Main(Day.valueOf(str));
+
+//         // Call the dayIsLike method to print information about the day
+//         t1.dayIsLike();
+
+//         // Iterate through all values of the Day enum and print their names and ordinal indices
+//         for (Day d : Day.values()) {
+//             System.out.println(d + " at index " + d.ordinal());
+//         }
+//     }
+// }
+
+
+
+
+// public class Main {
+//     enum Day {
+//         SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+//     }
+
+//     public static void main(String[] args) {
+//         // Use the enum in a switch case
+//         Day day = Day.WEDNESDAY;
+
+//         switch (day) {
+//             case SUNDAY:
+//                 System.out.println("It's a lazy Sunday!");
+//                 break;
+//             case MONDAY:
+//                 System.out.println("Start of the workweek.");
+//                 break;
+//             case TUESDAY:
+//             case WEDNESDAY:
+//             case THURSDAY:
+//                 System.out.println("It's a regular weekday.");
+//                 break;
+//             case FRIDAY:
+//                 System.out.println("Friday, almost there!");
+//                 break;
+//             case SATURDAY:
+//                 System.out.println("It's the weekend!");
+//                 break;
+//             default:
+//                 System.out.println("Invalid day.");
+//         }
+//     }
+// }
+
+
+// package package1;
+
+// public class VarArgsExample {
+// static void fun(int...a)
+// {
+// System.out.println(a.length);
+// for(int i:a)
+// System.out.println(i);
+// }
+// public static void main(String[] args) {
+
+// fun(100);
+// //fun(1,2);
+// //fun();
+// }
+
+// }
+
+
+// public class Main{
+//     public static void main(String[] args){
+        
+//       int arr[] = {1,2,3,4,5};
+//       int n = 5;
+//       for(int i = 0; i < n/2; i++){
+          
+//           int temp  = arr[i];
+//           arr[i] = arr[n-i-1];
+//           arr[n-i-1] = temp;
+//       }
+//       for(int i = 0; i < n; i++){
+          
+//           System.out.println(arr[i]);
+//       }
+//     } arr.length;
+// }\
+
+
+
+
+public class Main {
+    public static int maxSubarraySum(int[] arr) {
+        int maxEndingHere = arr[0];
+        int maxSoFar = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            maxEndingHere = Math.max(arr[i], maxEndingHere + arr[i]);
+            maxSoFar = Math.max(maxSoFar, maxEndingHere);
+        }
+
+        return maxSoFar;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { -2, -3, 4, -1, -2, 1, 5, -3 };
+        int result = maxSubarraySum(arr);
+        System.out.println("Maximum Subarray Sum: " + result);
+    }
+}
+
+

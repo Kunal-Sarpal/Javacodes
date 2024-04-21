@@ -1,0 +1,172 @@
+
+// // // import java.util.Scanner;
+// // // public class Main
+// // // {
+// // //   public static void main (String[]args)
+// // //   {
+// // //     int a, b, c;
+// // //       System.out.println ("Enter first Number: ");
+// // //     Scanner sc = new Scanner (System.in);
+// // //     a = sc.nextInt();
+// // //       System.out.println ("Enter first Number: ");
+// // //     b = sc.nextInt();
+// // //     c = a + b;
+// // //      System.out.println ("The Result is: "+c);
+
+
+// // //   }
+// // // }
+// // import java.util.Scanner;
+// // public class Main
+// // {
+// //   public static void main (String[]args)
+// //   {  
+// //       // widening implicit conversion
+// //     // int a, b, c;
+// //   int x = 3;
+// //   long y = x;
+// //   float z = y;
+// //   System.out.println(x);
+// //   System.out.println(y);
+// //   System.out.println(z);
+// //   // Exmplicit conversion NArrowing
+// //   double f = 134.244;
+// //   long c = (long)f;
+// //   int j = (int)c;
+// //       System.out.println(f);
+// //   System.out.println(c);
+// //   System.out.println(j);
+
+
+// //   }
+// // }
+
+// // // import java.util.Scanner;
+// // // public class Main
+// // // {
+// // //   public static void main (String[]args)
+// // //   {
+// // //     int a, b, c;
+// // //       System.out.println ("Enter first Number: ");
+// // //     Scanner sc = new Scanner (System.in);
+// // //     a = sc.nextInt();
+// // //       System.out.println ("Enter first Number: ");
+// // //     b = sc.nextInt();
+// // //     c = a + b;
+// // //      System.out.println ("The Result is: "+c);
+
+
+// // //   }
+// // // }
+// // import java.util.Scanner;
+// // public class Main
+// // {
+// //   public static void main (String[]args)
+// //   {  
+// //       // widening implicit conversion
+// //     // int a, b, c;
+// //   int x = 3;
+// //   long y = x;
+// //   float z = y;
+// //   System.out.println(x);
+// //   System.out.println(y);
+// //   System.out.println(z);
+// //   // Exmplicit conversion NArrowing
+// //   double f = 134.244;
+// //   long c = (long)f;
+// //   int j = (int)c;
+// //       System.out.println(f);
+// //   System.out.println(c);
+// //   System.out.println(j);
+
+
+// //   }
+// // }
+// import java.util.Scanner;
+// public class Main
+// {
+//     public class Student{
+//         int roll;
+//         String name;
+//         Static int cnt = 0
+//         Student(){
+//             cnt++;
+//         }
+//         void display(){
+//             System.out.println(cnt)
+//         }
+//     }
+//   public static void main (String[]args)
+//   {  
+//          Student s1 = new Student();
+//          Student s2 = new Student();
+//          Student s3 = new Student();
+//   }
+// }
+// import java.util.Scanner;
+
+// public class Main {
+//     public static class Student {
+//         int roll;
+//         String name;
+//         static int cnt = 0;
+
+//         Student() {
+//             cnt++;
+//         }
+
+//         void display() {
+//             System.out.println("Total Students: " + cnt);
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         // Creating instances of Student class
+//         Student student1 = new Student();
+//         Student student2 = new Student();
+
+//         // Displaying the total count of students
+//         student1.display();  // Output: Total Students: 2
+//     }
+// }
+// public class Objcnt
+// {
+// static int cnt=0;
+// Objcnt(){
+// cnt++;
+// }
+// public static void main(String args[]){
+// Objcnt obj1=new Objcnt();
+// Objcnt obj2=new Objcnt();
+// System.out.println("Number of objects:"+cnt);
+// }
+// }
+
+
+public class Main {
+
+    // Static variable
+    static String clg = "LPU";
+
+    // Static method to update the static variable
+    static void changeClgName() {
+        clg = "CU";
+    }
+
+    // Static method to display the static variable
+    static void displayClgName() {
+        System.out.println("College Name: " + clg);
+    }
+
+    public static void main(String[] args) {
+        // Display the initial college name
+        System.out.println("Initial College Name: " + clg);
+
+        // Call the static method to change the college name
+        changeClgName();
+
+        // Display the updated college name
+        displayClgName();
+        System.out.println("Initial College Name: " + clg);
+    }
+}

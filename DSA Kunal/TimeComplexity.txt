@@ -1,0 +1,5 @@
+Big-O  -> Upper Bound (complexity can't be more than this Worst Case)
+Omega  -> Lower Bound (complexity can be more than this best Case)
+Theta -> (accurate complexity)
+
+ArrayList <-> Vector in c++ (used when we dont know the size of array how much size of array we want)

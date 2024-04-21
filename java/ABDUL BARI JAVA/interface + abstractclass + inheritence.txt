@@ -1,0 +1,117 @@
+
+// abstract class Shape{
+//     Shape(){
+//         System.out.print("Shape is : ");
+//     }
+//     abstract public void area();
+//     abstract public void Perimeter();
+//     // abstract public void Radius();
+// }
+// class Circle extends Shape{
+//     int radius;
+//     Circle(int x){
+//         this.radius = x;
+//         System.out.println("Circle");
+//     }
+//     public void area(){
+//         System.out.println("Area of Circle: " + Math.PI * radius * radius);
+//     }
+//     public void Perimeter(){
+//         System.out.println("Perimeter of Circle: " + 2 * Math.PI * radius);
+//     }
+    
+// }
+// class Reactangle extends Shape{
+//     int l;
+//     int b;
+//     Reactangle(int l, int b){
+//         this.l = l;
+//         this.b = b;
+//         System.out.println("Reactangle");
+//     }
+//     public void area(){
+//         System.out.println("Area of Reactangle : " + l * b);
+//     }
+//     public void Perimeter(){
+//         System.out.println("Perimeter of Reactangle : " + (2 * (l + b)));
+//     }
+    
+    
+// }
+// public class Main{
+//     public static void main(String[] args){
+//         Shape s1 = new Circle(34);
+//         s1.area();
+//         Shape s2 = new Reactangle(5,6);
+//         s2.area();
+//     }
+// }
+
+// Interfaces
+
+// interface Test{
+//     void meth1();
+//     void meth2();
+        
+    
+// }
+// class MyTest implements Test{
+//     public void meth1(){
+//         System.out.println("Hey i am meth1");
+//     }
+//     public void meth2(){
+//         System.out.println("Hey i am meth3");
+//     }
+// }
+
+// public class Main{
+//     public static void main(String[] args){
+//         Test t = new MyTest();
+//         t.meth1();
+//         t.meth2();
+//     }
+// }
+
+
+package interfaceexample;
+
+class Phone 
+{
+    public void call() { System.out.println("Phone call"); }
+    public void sms() { System.out.println("Phone sending SMS"); }
+}
+
+interface ICamera
+{
+    void click();
+    void record();
+}
+
+interface IMusicPlayer
+{
+    void play();
+    void stop();
+}
+
+class SmartPhone extends Phone implements ICamera,IMusicPlayer
+{
+    public void videoCall() { System.out.println("Smart Phone video calling"); }
+   
+    public void click() { System.out.println("Smart Phone Clicking Photo"); }
+    public void record() { System.out.println("Smart Phone recording video"); }
+    public void play() { System.out.println("Smart Phone playing music"); }
+    public void stop() { System.out.println("Smart Phone stopped playing music"); }
+
+}
+public class InterfaceExample 
+{
+
+    public static void main(String[] args) 
+    {
+        IMusicPlayer sp=new SmartPhone();
+        sp.play();
+        sp.stop();
+        
+    }
+    
+}

@@ -1,0 +1,233 @@
+// // public class Main {
+// //     public static void main(String[] args) {
+// //         // Autoboxing: Converting primitives to wrapper objects
+// //         int primitiveInt = 42;
+// //         Integer wrapperInt = primitiveInt; // Autoboxing
+
+// //         double primitiveDouble = 3.14;
+// //         Double wrapperDouble = primitiveDouble; // Autoboxing
+
+// //         // Unboxing: Converting wrapper objects to primitives
+// //         Integer anotherWrapperInt = 99;
+// //         int anotherPrimitiveInt = anotherWrapperInt; // Unboxing
+
+// //         Double anotherWrapperDouble = 2.718;
+// //         double anotherPrimitiveDouble = anotherWrapperDouble; // Unboxing
+
+// //         System.out.println("Autoboxing Example:");
+// //         System.out.println("Original int: " + primitiveInt);
+// //         System.out.println("Wrapped Integer: " + wrapperInt);
+
+// //         System.out.println("\nUnboxing Example:");
+// //         System.out.println("Original Double: " + primitiveDouble);
+// //         System.out.println("Unwrapped double: " + wrapperDouble);
+
+// //         System.out.println("\nAnother Unboxing Example:");
+// //         System.out.println("Original Integer: " + anotherWrapperInt);
+// //         System.out.println("Unwrapped int: " + anotherPrimitiveInt);
+
+// //         System.out.println("\nAnother Autoboxing Example:");
+// //         System.out.println("Original Double: " + anotherWrapperDouble);
+// //         System.out.println("Wrapped Double: " + anotherPrimitiveDouble);
+// //     }
+// // }
+
+
+
+// public class Main {
+//     public static void main(String[] args) {
+//         int a = 5;
+//         Integer i = Integer.valueOf(a); // Autoboxing
+//         System.out.println(i instanceof Integer); //wheather a particular instance is object of class
+//         // Autoboxing in the enhanced for loop
+//         Integer j = 10; // Autoboxing
+
+//         System.out.println(a + " " + i + " " + j);
+//     }
+// }
+
+// // ----> instance operator is always working with object or classes
+
+// // public class Main {
+// //     public static void main(String[] args) {
+// //         Integer a = new Integer(7);
+// //         int i = a.intValue();
+// //         int j = a; // Unboxing
+
+// //         System.out.println(a + "\n" + i + " " + j);
+// //     }
+// // }
+
+// // public class Main{
+// // public static void main(String[] args)
+// // {
+// //     Integer a = new Integer(67);
+// //     int i = a;
+// //     System.out.println(a + "  " + i);
+    
+// // }
+// // }
+
+//  // Corrected the package name
+
+// // The setData and getData methods are examples of setter and getter methods, respectively. They allow controlled access to the private variable.
+// // class B {
+// //     private int data = 20;
+
+// //     public void setData(int a) {
+// //         data = a;
+// //     }
+
+// //     public int getData() {
+// //         return data;
+// //     }
+// // }
+
+// // public class Main{
+// //     public static void main(String[] args) {
+// //         B obj = new B();
+// //         obj.setData(40);
+// //         int res = obj.getData();
+// //         System.out.println(res);
+// //     }
+// // }
+
+
+public class Main {
+
+    // Instance block
+    {
+        System.out.println("instance block"); // INstance block called whike createing object called
+    }
+
+    public Main() {
+        System.out.println("constructor");
+    }
+
+    public void method1() {
+        System.out.println("method1");
+    }
+
+    // Static block
+    static {
+        System.out.println("static"); // always ststic called will be called 
+    }
+
+    public static void main(String[] args) {
+        Main f = new Main();
+        f.method1();
+    }
+}
+
+
+
+// // // class Student
+// // // {
+// // //     int roll;
+// // //     String name;
+// // //     static String Clg_Name = "LPU";
+// // //     void getdata(int x, String y)
+// // //     {
+// // //         roll = x;
+// // //         name = y;
+// // //     }
+// // //     void putdata()
+// // //     {
+// // //         System.out.println("[ Student name: "+ name + "\n" + "Student Roll_N--"+roll+" ]");
+        
+// // //     }
+// // // }
+// // // public class Main {
+// // //     public static void main(String[] args) {
+// // //         Student s1 = new Student();
+// // //         Student s2 = new Student();
+
+// // //         s1.getdata(2, "Kunal");
+// // //         s2.getdata(1, "Rabb");
+
+// // //         s1.putdata();
+// // //         s2.putdata();
+// // //     }
+// // // }
+// // import java.util.Scanner;
+
+// // class Student
+// // {
+// //     int roll;
+// //     String name;
+// //     static String Clg_Name = "LPU";
+// //     void getdata(int x, String y)
+// //     {
+// //         roll = x;
+// //         name = y;
+// //     }
+// //     void putdata()
+// //     {
+// //         System.out.println("[ Student name ----- "+ name + " " + "Student Roll_N ----- "+roll+" ]");
+// //         System.out.println(Clg_Name);
+        
+// //     }
+// //     static void change()
+// //     {   
+// //         String m;
+// //         Scanner sc = new Scanner(System.in);
+// //         m = sc.next();
+// //         Clg_Name = m;
+// //         System.out.println("College name Changed..");
+// //     }
+// // }
+// // public class Main {
+// //     public static void main(String[] args) {
+// //         Student s1 = new Student();
+// //         Student s2 = new Student();
+
+// //         s1.getdata(2, "Kunal");
+// //         s2.getdata(1, "Rabb");
+
+// //         s1.putdata();
+// //         s2.putdata();
+// //         Student.change();
+// //         s1.putdata();
+// //         s2.putdata();
+// //     }
+// // }
+// public class Def {
+//     public static void main(String[] args) {
+//       int a = 34;
+//       Integer i = Integer.valueOf(a);
+//       System.out.println(i instanceof Integer);
+       
+//       Integer h = new Integer(34);
+//       int g = h;
+//         System.out.println(g);
+//     }
+// }
+
+public class Main {
+
+    // Instance block
+    {
+        System.out.println("instance block"); // Instance block called while creating an object
+    }
+
+    public Main() {
+        System.out.println("constructor"); // Constructor called when an object is created
+    }
+
+    public void method1() {
+        System.out.println("method1");
+    }
+
+    // Static block
+    static {
+        System.out.println("static"); // Static block called when the class is loaded into memory
+    }
+
+    public static void main(String[] args) {
+        Main f = new Main(); // Creating an object of the Main class
+        f.method1(); // Calling the method1
+    }
+}
+
+
+

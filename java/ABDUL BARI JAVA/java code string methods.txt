@@ -1,0 +1,59 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+public class Main
+{
+	public static void main(String[] args) {
+		
+		String str = new String("Kunal Sarpal    ");
+		
+		System.out.println(str.trim().length());
+		String st = str.toUpperCase();
+		str = str.toLowerCase();
+		System.out.println(st);
+		System.out.println(str);
+		str = str.trim();
+		System.out.println(str);
+		String str2 = str.substring(0,5);
+		String str3 = str.substring(2);
+		System.out.println(str2);
+		System.out.println(str3);
+        String str7 = str.replace('u','N');
+        System.out.println(str7);
+        
+        String str34 = "https://Kun.al-sarpal.vercel.com";
+        
+        // STartswith
+        System.out.println(str34.startsWith("https"));
+        System.out.println(str34.endsWith("com"));
+        System.out.println(str34.charAt(6));
+        System.out.println(str34.indexOf("."));
+        System.out.println(str34.indexOf(":"));
+        System.out.println(str34.indexOf("?"));
+        System.out.println(str34.lastIndexOf("."));
+        int g = 90;
+        String str19 = "LA nu";
+        String str20 = " Ma le ke    java LA nu";
+        String new_s = str19.concat(str20);
+        System.out.println(new_s);
+        System.out.println(String.valueOf(g));
+        
+        // MATCHES
+        String str100 = "A";
+        System.out.println(str100.matches(".")); //only one alphabet
+        System.out.println(str100.matches("[abc]")); //only one alphabet but it is ffrom a,b,c;
+        System.out.println(str100.matches("[^abc]")); //only one alphabet but it is not a,b,c;
+        System.out.println(str100.matches("[a-b0-3]")); //only one alphabet but it is not a,b,c;
+        System.out.println(str100.matches("[a-z][0-9]")); //first alphabet from a-z and second from 0-9
+        System.out.println(str100.matches("A|B")); //Alphabet should be A or B
+        
+        
+        // Meta Chracters
+        
+	}
+}
